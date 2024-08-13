@@ -1,0 +1,5 @@
+# db_config.yaml
+credentials_path: "credentials.yaml"
+
+database:
+  dbname: "supplychain"
