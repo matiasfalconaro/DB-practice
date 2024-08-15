@@ -5,10 +5,12 @@ The project is a Dockerized ETL environment featuring an API for data management
 
 ## Architecture
 A Dockerized microservices architecture with FastAPI for data access, an ETL service for data processing, and PostgreSQL for storage.
+
 ![Project Architecture](imgs/architecture.svg)
 
 ## Data model
 The database design is derived from an Excel (.xlsx) file
+
 [supply_chain.xlsx](database/files/supply_chain.xlsx)
 
 ### ERD
