@@ -3,8 +3,7 @@ import sys
 import yaml
 import logging
 
-from sqlalchemy import create_engine, inspect
-from sqlalchemy_utils import database_exists, create_database
+from sqlalchemy import create_engine
 from models import Base
 
 
@@ -24,12 +23,6 @@ def get_database_url(credentials: dict, dbname: str) -> str:
 def create_tables(engine):
     Base.metadata.create_all(engine)
     print("Tables created successfully")
-
-
-def get_foreign_keys(table):
-    inspector = inspect(engine)
-    fks = inspector.get_foreign_keys(table.__tablename__)
-    return fks
 
 
 if __name__ == "__main__":
@@ -56,11 +49,5 @@ if __name__ == "__main__":
 
     engine = create_engine(db_url)
 
-    if not database_exists(engine.url):
-        print(f"Creating database {dbname}...")
-        create_database(engine.url)
-        print(f"Database {dbname} created successfully.")
-    else:
-        print(f"Database {dbname} already exists.")
-
+    # Just create tables, assuming the database already exists
     create_tables(engine)
