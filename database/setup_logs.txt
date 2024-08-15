@@ -2,6 +2,26 @@ matias:~/Documents/DB-practice/ (main)$ python3 -m venv ven
 
 matias:~/Documents/DB-practice/ (main)$ source venv/bin/activate
 
+(venv) matias:~/Documents/DB-practice/ (main)$ pip install -r requirements.txt
+Collecting greenlet==3.0.3
+  Using cached greenlet-3.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (667 kB)
+Processing /home/matias/.cache/pip/wheels/ad/76/94/83d0d344d36a4d846bda734160afb35b919852ca8afa53c5b9/psycopg2-2.9.9-cp38-cp38-linux_x86_64.whl
+Collecting psycopg2-binary==2.9.9
+  Downloading psycopg2_binary-2.9.9-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+     |████████████████████████████████| 3.0 MB 2.7 MB/s 
+Collecting PyYAML==6.0.1
+  Using cached PyYAML-6.0.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (736 kB)
+Collecting SQLAlchemy==2.0.32
+  Downloading SQLAlchemy-2.0.32-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.1 MB)
+     |████████████████████████████████| 3.1 MB 4.1 MB/s 
+Collecting SQLAlchemy-Utils==0.41.2
+  Downloading SQLAlchemy_Utils-0.41.2-py3-none-any.whl (93 kB)
+     |████████████████████████████████| 93 kB 1.3 MB/s 
+Collecting typing_extensions==4.12.2
+  Using cached typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+Installing collected packages: greenlet, psycopg2, psycopg2-binary, PyYAML, typing-extensions, SQLAlchemy, SQLAlchemy-Utils
+Successfully installed PyYAML-6.0.1 SQLAlchemy-2.0.32 SQLAlchemy-Utils-0.41.2 greenlet-3.0.3 psycopg2-2.9.9 psycopg2-binary-2.9.9 typing-extensions-4.12.2
+
 (venv) matias:~/Documents/DB-practice/ (main)$ cd database
 
 (venv) matias:~/Documents/DB-practice/database (main)$ docker pull postgres
