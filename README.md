@@ -16,15 +16,7 @@ The database design is derived from an Excel (.xlsx) file
 ### ERD
 ![Project Data model](imgs/data_model.svg)
 
-## Set up development database
+## Automated databases creation and set up
 ```
-$ python3 -m venv ven
-$ source venv/bin/activate
-$ pip install -r requirements.txt
-$ cd database
-$ docker pull postgres
-$ docker run --name supply-chain -e POSTGRES_USER=development_user -e POSTGRES_PASSWORD=development_password -e POSTGRES_DB=supplychain_development -p 5432:5432 -d postgres
-$ docker ps -a
-$ docker exec -it supply-chain psql -U development_user -d postgres
-$ python3 db_setup.py supplychain_development
+$ ./main.sh
 ```
