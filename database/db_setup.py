@@ -12,7 +12,13 @@ logging.getLogger('sqlalchemy.engine').setLevel(logging.WARNING)
 
 
 def load_yaml(file_path: str) -> dict:
-    with open(file_path, 'r') as file:
+    # Hardcoded absolute path to the db_config.yaml file
+    hardcoded_path = '/home/matias/Documents/DB-practice/database/db_config.yaml'
+    
+    # If you want to keep the flexibility of using file_path, remove the hardcoded path
+    abs_path = os.path.abspath(file_path) if file_path != 'db_config.yaml' else hardcoded_path
+    
+    with open(abs_path, 'r') as file:
         return yaml.safe_load(file)
 
 
